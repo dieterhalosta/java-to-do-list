@@ -7,17 +7,13 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.time.LocalDate;
 
-/**
- * Hello world!
- *
- */
-public class App 
+public class App
 {
-    public static void main( String[] args ) throws IOException, SQLException {
+    public static void main( String[] args ) throws IOException, SQLException, ClassNotFoundException {
 
         CreateTaskRequest request = new CreateTaskRequest();
-        request.setDescription("Learn JDBC");
-        request.setDeadline(LocalDate.now().plusWeeks(2));
+        request.setDescription("Learn JDBCTEST222");
+        request.setDeadline(LocalDate.now().plusWeeks(1));
 
         TaskRepository taskRepository = new TaskRepository();
         taskRepository.createTask(request);
