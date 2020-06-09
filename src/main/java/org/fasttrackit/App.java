@@ -15,9 +15,9 @@ public class App
 {
     public static void main( String[] args ) throws IOException, SQLException, ClassNotFoundException {
             // create a task
-//        CreateTaskRequest request = new CreateTaskRequest();
-//        request.setDescription("Learn JDBCTEST222");
-//        request.setDeadline(LocalDate.now().plusWeeks(1));
+        CreateTaskRequest request = new CreateTaskRequest();
+        request.setDescription("Learn JDBCTEST22234555");
+        request.setDeadline(LocalDate.now().plusWeeks(1));
 
 
 //        UpdateTaskRequest updateRequest = new UpdateTaskRequest();
@@ -25,6 +25,8 @@ public class App
 
 
         TaskRepository taskRepository = new TaskRepository();
+
+        taskRepository.createTask(request);
 
         // update a task
         //        taskRepository.updateTask(1, updateRequest);
